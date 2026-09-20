@@ -1,4 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Appin Street Bakery
+
+Wangaratta bakery landing page and bulk pre-order prototype, built with Next.js 14 and Tailwind CSS.
+
+## Local setup
+
+```bash
+npm install
+copy .env.example .env.local
+npm run dev
+```
+
+The preorder form posts to `POST /api/orders`. It sends the request to the bakery inbox through Resend. The form intentionally falls back to the phone number when email delivery has not been configured yet.
+
+## Vercel setup
+
+1. Create a Resend account and an API key.
+2. In the Vercel project, open **Settings → Environment Variables**.
+3. Add these variables to Preview and Production:
+
+   - `RESEND_API_KEY` — your Resend API key.
+   - `ORDER_TO_EMAIL` — the inbox that should receive orders, currently `appinbakery@bigpond.com`.
+
+4. Redeploy after saving the variables.
+
+For production email branding, verify a bakery domain in Resend and change the `from` address in `src/app/api/orders/route.ts` from `onboarding@resend.dev` to the verified address.
 
 ## Getting Started
 

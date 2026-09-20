@@ -23,6 +23,8 @@ export default function BulkOrderForm() {
 
   const [submitted, setSubmitted] = useState(false);
   const [dateError, setDateError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -32,8 +34,9 @@ export default function BulkOrderForm() {
     if (name === "collectionDate") setDateError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
 
     if (!formData.collectionDate) {
       setDateError("Please select a collection date.");
@@ -56,7 +59,21 @@ export default function BulkOrderForm() {
       return;
     }
 
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Something went wrong.");
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "We couldn't send that order. Please call us instead.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -340,8 +357,9 @@ export default function BulkOrderForm() {
           type="submit"
           className="w-full sm:w-auto px-8 py-3.5 bg-amber-600 hover:bg-amber-500 text-white font-black text-sm rounded-xl shadow-md transition-all active:scale-95"
         >
-          Submit Smoko / Bulk Order
+          {isSubmitting ? "Sending request…" : "Submit Smoko / Bulk Order"}
         </button>
+        {submitError && <p role="alert" className="text-xs font-semibold text-red-700 sm:max-w-xs">{submitError}</p>}
       </div>
     </form>
   );

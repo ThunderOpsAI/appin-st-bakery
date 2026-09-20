@@ -223,12 +223,12 @@ export default function BakeryMenu() {
   const activeCategory = MENU_CATEGORIES.find((cat) => cat.id === activeTab) || MENU_CATEGORIES[0];
 
   return (
-    <div className="bg-white rounded-3xl p-6 sm:p-10 border border-amber-200/90 shadow-lg">
+    <div className="theme-surface rounded-[2rem] p-6 sm:p-10 border shadow-lg">
       <div className="text-center max-w-2xl mx-auto mb-8">
         <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
           Baked Fresh Daily from 6:30am
         </span>
-        <h3 className="text-3xl sm:text-4xl font-black text-amber-950 mt-2">
+        <h3 className="display-type text-4xl sm:text-5xl font-black theme-accent mt-2">
           Daily Bakery Menu
         </h3>
         <p className="text-stone-600 text-sm mt-1">
