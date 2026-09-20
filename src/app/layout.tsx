@@ -16,8 +16,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <header className="sticky top-0 z-50 bg-[var(--surface)]/90 backdrop-blur-xl border-b theme-border shadow-[0_8px_30px_-20px_var(--shadow-color)]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div className="flex items-center justify-between">
-                <a href="/" className="flex items-center gap-3 group">
-                  <img src="/art/logo.png" alt="Appin Street Bakery Logo" className="h-14 w-auto object-contain rounded-md shadow-sm group-hover:scale-[1.02] transition-transform" />
+                <a href="/" className="flex items-center gap-4 group">
+                  <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border-[3px] border-white shadow-[0_4px_12px_rgba(0,0,0,0.1)] group-hover:scale-[1.05] transition-transform bg-black flex items-center">
+                    <img src="/art/logo.png" alt="Appin Street Bakery Logo" className="h-[120%] w-auto max-w-none origin-left" style={{ transform: 'translateX(-2%)' }} />
+                  </div>
+                  <div className="flex flex-col"><span className="display-type text-2xl font-black tracking-tight leading-none text-stone-900 group-hover:text-stone-600 transition-colors">Appin Street Bakery</span><span className="text-[11px] uppercase tracking-widest text-stone-500 font-medium mt-1">Open from 6:30am · Wangaratta</span></div>
                 </a>
                 <a href="tel:0357212496" className="md:hidden theme-button rounded-full px-3 py-1.5 font-bold text-xs">Call us</a>
               </div>

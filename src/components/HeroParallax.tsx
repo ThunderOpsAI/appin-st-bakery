@@ -9,7 +9,7 @@ export default function HeroParallax({ imageUrl, children }: { imageUrl: string;
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
-    <section ref={ref} className="relative mx-4 mt-4 lg:mx-8 lg:mt-6 rounded-[2rem] overflow-hidden shadow-2xl theme-border min-h-[520px] lg:min-h-[600px] flex items-center">
+    <section ref={ref} className="relative mx-4 mt-4 lg:mx-8 lg:mt-6 rounded-[3rem] overflow-hidden shadow-2xl theme-border min-h-[600px] lg:min-h-[80vh] flex items-center">
       <motion.div style={{ y }} className="absolute inset-0 scale-110" aria-hidden>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${imageUrl}')` }} />
       </motion.div>

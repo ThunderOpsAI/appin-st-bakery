@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="space-y-20 pb-20">
       {/* Hero Section */}
-      <HeroParallax imageUrl="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?q=80&w=1920&auto=format&fit=crop">
+      <HeroParallax imageUrl="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=1920&auto=format&fit=crop">
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-16 text-white w-full">
           {/* Tradie Hook Pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white font-bold text-xs sm:text-sm border border-white/25 backdrop-blur-md mb-4">
