@@ -17,8 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div className="flex items-center justify-between">
                 <a href="/" className="flex items-center gap-3 group">
-                  <div className="w-10 h-10 rounded-xl theme-accent-bg flex items-center justify-center font-black text-xl shadow-md group-hover:rotate-[-5deg] group-hover:scale-105 transition-transform">✦</div>
-                  <div><span className="display-type text-xl sm:text-2xl font-black tracking-tight leading-tight block">Appin Street Bakery</span><p className="text-xs theme-accent font-semibold">Open from 6:30am · 98 Appin Street, Wangaratta</p></div>
+                  <img src="/art/logo.png" alt="Appin Street Bakery Logo" className="h-14 w-auto object-contain rounded-md shadow-sm group-hover:scale-[1.02] transition-transform" />
                 </a>
                 <a href="tel:0357212496" className="md:hidden theme-button rounded-full px-3 py-1.5 font-bold text-xs">Call us</a>
               </div>
