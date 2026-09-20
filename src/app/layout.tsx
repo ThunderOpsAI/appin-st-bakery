@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <a href="tel:0357212496" className="md:hidden theme-button rounded-full px-3 py-1.5 font-bold text-xs">Call us</a>
               </div>
               <div className="flex items-center justify-between md:justify-end gap-4 sm:gap-6 pt-2 md:pt-0 border-t theme-border md:border-none text-xs sm:text-sm font-semibold">
-                <nav className="flex items-center gap-3 sm:gap-5 theme-muted"><a href="/#daily-menu">Daily Menu</a><a href="/#smoko">Smoko Pre-Orders</a><a href="/#catering">Bulk &amp; Catering</a><a href="/#hours">Hours &amp; Location</a></nav>
+                <nav className="flex items-center gap-3 sm:gap-5 theme-muted"><a href="/menu">Daily Menu</a><a href="/catering">Smoko Pre-Orders</a><a href="/catering#catering">Bulk &amp; Catering</a><a href="/#hours">Hours &amp; Location</a></nav>
                 <div className="hidden lg:flex items-center gap-2 theme-accent-soft px-3 py-1 rounded-full text-xs"><span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" /><span>Early Open 6:30 AM</span></div>
                 <a href="tel:0357212496" className="hidden md:inline-flex items-center gap-2 theme-button px-4 py-2 font-bold text-sm rounded-full">(03) 5721 2496</a>
               </div>
