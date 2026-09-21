@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const FEATURED_BAKES = [
-  { src: "https://images.unsplash.com/photo-1604085792782-8d92f276d7d8?q=80&w=1200&auto=format&fit=crop", label: "The hot counter", title: "Hand-crimped, proper pies", copy: "Golden pastry, rich gravy, and enough filling to make lunch count." },
+  { src: "https://images.unsplash.com/photo-1608039783021-6116a558f0c5?q=80&w=1200&auto=format&fit=crop", label: "The hot counter", title: "Hand-crimped, proper pies", copy: "Golden pastry, rich gravy, and enough filling to make lunch count." },
   { src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop", label: "Before dawn", title: "Crusty loaves every morning", copy: "Baked early for sandwiches, toast, and the drive home." },
   { src: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop", label: "Sweet finish", title: "Slices worth stopping for", copy: "Classic vanilla slice, hedgehog, caramel, and a little nostalgia." },
 ];
